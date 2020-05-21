@@ -24,7 +24,7 @@ def lambda_handler(event, context):
     
     # Strip input folder name and file extension from input key to create output key
     input_filename = input_key.replace(INPUT_FOLDER_NAME, '', 1)
-    output_key = os.path.splitext(input_filename)[0]
+    output_key = input_key
 
     # Headers for Zencoder request
     headers = {
